@@ -17,19 +17,15 @@
     <div id="result"></div>
 
     <script>
-        // Function to check if a string is a palindrome
         function isPalindrome(input) {
             const cleanedInput = input.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
             const reversedInput = cleanedInput.split('').reverse().join('');
             return cleanedInput === reversedInput;
         }
-
-        // Event listener for the button click
         document.getElementById('check-btn').addEventListener('click', function() {
             const input = document.getElementById('text-input').value.trim();
             const resultDiv = document.getElementById('result');
 
-            // Check if input is empty
             if (!input) {
                 alert("Please input a value");
                 return;
